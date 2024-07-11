@@ -1,0 +1,15 @@
+#error-message {
+  color: red;
+}
+
+button {
+  margin: 5px;
+}
+
+#reservation-list li {
+  margin: 10px 0;
+}
+
+.hidden {
+  display: none;
+}

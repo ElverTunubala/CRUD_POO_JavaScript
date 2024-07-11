@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Reservas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Sistema de Reservas</h1>
+        <div id="auth">
+            <h2>Autenticación</h2>
+            <input type="text" id="username" placeholder="Nombre de usuario">
+            <input type="password" id="password" placeholder="Contraseña">
+            <button id="login">Iniciar Sesión</button>
+            <button id="register">Registrarse</button>
+        </div>
+        <div id="actions" style="display: none;">
+            <h2>Acciones</h2>
+            <button id="create-reservation">Crear Reserva</button>
+            <button id="view-reservations">Ver Reservas</button>
+            <button id="logout">Cerrar Sesión</button>
+        </div>
+        <div id="reservation-form" style="display: none;">
+            <h2>Crear Reserva</h2>
+            <input type="text" id="reservation-details" placeholder="Detalles de la reserva">
+            <button id="save-reservation">Guardar</button>
+        </div>
+        <div id="reservations" style="display: none;">
+            <h2>Mis Reservas</h2>
+            <ul id="reservation-list"></ul>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
