@@ -1,3 +1,4 @@
+const key_admin="123456"
 class Persona {
   constructor(username, password) {
       this.username = username;
@@ -99,9 +100,23 @@ document.getElementById('register').addEventListener('click', () => {
   const username = document.getElementById('username').value;
   const password = document.getElementById('password').value;
 
-  const user = new UsuarioRegular(username, password);
-  user.register();
-  alert('Usuario registrado con éxito');
+  const rol = document.getElementById('rol').value;
+  console.log('este es el rol: ',rol)
+
+  if (rol==='usuario'){
+    const user = new UsuarioRegular(username, password);
+    user.register();
+    alert('Usuario registrado con éxito');
+}else{
+    const verify= prompt("verifique la key_admin")
+    if(verify===key_admin){
+        const user = new UsuarioRegular(username, password);
+        user.register();
+        alert('admin registrado con éxito');
+    }
+}
+
+  
 });
 
 document.getElementById('create-reservation').addEventListener('click', () => {
